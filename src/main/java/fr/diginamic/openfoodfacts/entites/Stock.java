@@ -1,4 +1,4 @@
-package fr.diginamic.entites;
+package fr.diginamic.openfoodfacts.entites;
 
 import java.util.ArrayList;
 import java.util.List;

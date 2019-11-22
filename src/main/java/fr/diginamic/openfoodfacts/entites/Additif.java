@@ -1,4 +1,4 @@
-package fr.diginamic.entites;
+package fr.diginamic.openfoodfacts.entites;
 
 public class Additif {
 	private String libelle;
@@ -10,6 +10,8 @@ public class Additif {
 		super();
 		this.libelle = libelle;
 	}
+
+	
 	
 	
 }
