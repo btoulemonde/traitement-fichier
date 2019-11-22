@@ -2,7 +2,7 @@ package fr.diginamic.openfoodfacts.utils;
 
 public class ParseurProduits {
 	
-	public static void ajoutLigne(Inventaire inventaire, String ligne){
+	public static void ajoutLigne(Stock inventaire, String ligne){
 		
 		//découpage des lignes
 		String[] morceau = ligne.split("|");

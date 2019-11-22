@@ -10,8 +10,8 @@ import org.apache.commons.io.FileUtils;
 
 public class LectureDonnees {
 
-public static Inventaire lire(String cheminFichier){
-	Inventaire inventaire = new Inventaire();
+public static Stock lire(String cheminFichier){
+	Stock stock = new Stock();
 	
 	List<String> lignes =new ArrayList<>();
 	
@@ -22,9 +22,9 @@ public static Inventaire lire(String cheminFichier){
 		lignes.remove(0);
 		
 		for (String ligne:lignes){
-			ParseurProduits.ajoutLigne(inventaire, ligne);
+			ParseurProduits.ajoutLigne(stock, ligne);
 		}
-		return inventaire;
+		return stock;
 		
 		}catch (IOException e){
 			System.out.println(e.getMessage());

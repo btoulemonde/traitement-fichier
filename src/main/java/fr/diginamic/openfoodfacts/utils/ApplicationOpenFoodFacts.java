@@ -1,10 +1,12 @@
 package fr.diginamic.openfoodfacts.utils;
 
+import java.util.Scanner;
+
 public class ApplicationOpenFoodFacts {
 
 	public static void main(String[] args) {
-		
-		Inventaire inventaire = LectureDonnees.lire("C:/work/open-food-facts");
+		Scanner scanner = new Scanner(System.in);
+		Stock stock = LectureDonnees.lire("C:/work/open-food-facts");
 		
 		
 		
@@ -14,6 +16,21 @@ public class ApplicationOpenFoodFacts {
 		System.out.println("4: Afficher les allergènes les plus courants avec le nb de produits dans lesquels ils apparaissent ");
 		System.out.println("5: Afficher les additifs les plus courants avec le nb de produits dans lesquels ils apparaissent");
 
+		String choixUser = scanner.next();
+		int choix = Integer.parseInt(choixUser);
+		
+		switch(choix){
+		case 1:
+			break;
+		case 2: 
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		}
 	}
 
 }
