@@ -2,9 +2,12 @@ package fr.diginamic.openfoodfacts.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
+import fr.diginamic.openfoodfacts.entites.Categorie;
 import fr.diginamic.openfoodfacts.entites.Produit;
 import fr.diginamic.openfoodfacts.service.comparator.ComparateurAlpha;
 import fr.diginamic.openfoodfacts.service.exception.Except;
@@ -15,12 +18,14 @@ public class MeilleurProduitCategorie {
 
 	public void traiter(Stock stock, Scanner scanner) throws Except {
 
+		
+		List<Produit> produits = stock.getProduits();
+		List<Produit> choixUser = new ArrayList<>();
+		
 		System.out.println("veuillez saisir une catégorie: ");
 		String choix = scanner.next();
 
-		List<Produit> produits = stock.getProduits();
-		List<Produit> choixUser = new ArrayList<>();
-
+		
 		for (Produit produit : produits) {
 			
 			if (produit.getCategorie().getLibelle().equalsIgnoreCase(choix)) {

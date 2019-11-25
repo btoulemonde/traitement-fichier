@@ -6,6 +6,7 @@ import java.util.Scanner;
 import fr.diginamic.openfoodfacts.entites.Produit;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitCategorie;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitMarque;
+import fr.diginamic.openfoodfacts.service.MeilleurProduitMarqueCategorie;
 import fr.diginamic.openfoodfacts.service.exception.Except;
 
 public class ApplicationOpenFoodFacts {
@@ -19,7 +20,7 @@ public class ApplicationOpenFoodFacts {
 			
 		
 		
-		
+		System.out.println("----MENU----\n");
 		System.out.println("1: Rechercher les meilleurs produits pour une Marque donnée ");
 		System.out.println("2: Rechercher les meilleurs produits pour une Catégorie donnée");
 		System.out.println("3: Rechercher les meilleurs produits par Marque et par Catégorie ");
@@ -47,6 +48,12 @@ public class ApplicationOpenFoodFacts {
 			}
 			break;
 		case 3:
+			MeilleurProduitMarqueCategorie meilleurProduitMarqueCategorie = new MeilleurProduitMarqueCategorie();
+			try {
+				meilleurProduitMarqueCategorie.traiter(scanner, stock);
+			} catch (Except e) {
+				System.out.println(e.getMessage());
+			}
 			break;
 		case 4:
 			break;
