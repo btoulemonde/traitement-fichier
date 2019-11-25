@@ -33,6 +33,8 @@ public class ParseurProduits {
 		
 		
 		
+		
+		
 		Produit produit = new Produit(nom, categorie, marque, scoreNutritionnel);
 		
 		stock.getProduits().add(produit);

@@ -3,6 +3,7 @@ package fr.diginamic.openfoodfacts.utils;
 import java.util.List;
 import java.util.Scanner;
 
+import fr.diginamic.openfoodfacts.entites.Allergene;
 import fr.diginamic.openfoodfacts.entites.Produit;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitCategorie;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitMarque;
@@ -15,9 +16,6 @@ public class ApplicationOpenFoodFacts {
 		Scanner scanner = new Scanner(System.in);
 		Stock stock = LectureDonnees.lire("C:/work/open-food-facts.csv");
 		
-		
-		
-			
 		
 		
 		System.out.println("----MENU----\n");
