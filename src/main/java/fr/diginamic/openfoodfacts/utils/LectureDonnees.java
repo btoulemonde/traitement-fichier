@@ -32,11 +32,4 @@ public static Stock lire(String cheminFichier){
 		}
 		
 	}
-
-
-		
-			
-
-			
-			
 }

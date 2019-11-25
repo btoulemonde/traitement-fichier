@@ -7,6 +7,7 @@ import fr.diginamic.openfoodfacts.entites.Produit;
 
 public class Stock {
 	private List<Produit> produits = new ArrayList<>();
+	
 
 	/**
 	 * @return the produits
@@ -22,6 +23,7 @@ public class Stock {
 		this.produits = produits;
 	}
 	
+
 	
 
 }

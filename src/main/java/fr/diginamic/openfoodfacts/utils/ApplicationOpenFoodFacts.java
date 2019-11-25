@@ -1,12 +1,22 @@
 package fr.diginamic.openfoodfacts.utils;
 
+import java.util.List;
 import java.util.Scanner;
+
+import fr.diginamic.openfoodfacts.entites.Produit;
+import fr.diginamic.openfoodfacts.service.MeilleurProduitCategorie;
+import fr.diginamic.openfoodfacts.service.MeilleurProduitMarque;
+import fr.diginamic.openfoodfacts.service.exception.Except;
 
 public class ApplicationOpenFoodFacts {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Stock stock = LectureDonnees.lire("C:/work/open-food-facts");
+		Stock stock = LectureDonnees.lire("C:/work/open-food-facts.csv");
+		
+		
+		
+			
 		
 		
 		
@@ -21,8 +31,20 @@ public class ApplicationOpenFoodFacts {
 		
 		switch(choix){
 		case 1:
+			MeilleurProduitMarque meilleurProduitMarque = new MeilleurProduitMarque();
+			try {
+				meilleurProduitMarque.traiter(stock, scanner);
+			} catch (Except e) {
+				System.out.println(e.getMessage());
+			}
 			break;
 		case 2: 
+			MeilleurProduitCategorie meilleurProduitCategorie = new MeilleurProduitCategorie();
+			try {
+				meilleurProduitCategorie.traiter(stock, scanner);
+			} catch (Except e) {
+				System.out.println(e.getMessage());
+			}
 			break;
 		case 3:
 			break;
@@ -31,6 +53,8 @@ public class ApplicationOpenFoodFacts {
 		case 5:
 			break;
 		}
+		
+	
 	}
 
 }
