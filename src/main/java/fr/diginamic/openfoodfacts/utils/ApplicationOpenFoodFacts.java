@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import fr.diginamic.openfoodfacts.entites.Allergene;
 import fr.diginamic.openfoodfacts.entites.Produit;
+import fr.diginamic.openfoodfacts.service.AllergeneCourant;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitCategorie;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitMarque;
 import fr.diginamic.openfoodfacts.service.MeilleurProduitMarqueCategorie;
@@ -54,6 +55,8 @@ public class ApplicationOpenFoodFacts {
 			}
 			break;
 		case 4:
+			AllergeneCourant allergeneCourant = new AllergeneCourant();
+			allergeneCourant.traiter(stock);
 			break;
 		case 5:
 			break;
