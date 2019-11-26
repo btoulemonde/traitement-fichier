@@ -1,6 +1,7 @@
 package fr.diginamic.openfoodfacts.service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -47,12 +48,11 @@ public class AllergeneCourant {
 			compteurs.put(allergene, compteur);
 		}
 		Set<String> allergene = compteurs.keySet();
-
 		Iterator<String> iterateur = allergene.iterator();
 		while (iterateur.hasNext()) {
 			String all = iterateur.next();
 			Integer compteur = compteurs.get(all);
-			System.out.println("allergene: " + all + " nb: " + compteur);
+			System.out.println("allergene: " + all + "--> nb: " + compteur);
 		}
 
 	}
