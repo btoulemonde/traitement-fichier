@@ -11,6 +11,7 @@ public class Compteur {
 	public Compteur(String nom) {
 		super();
 		this.nom = nom;
+		
 	}
 
 	/**
@@ -39,6 +40,14 @@ public class Compteur {
 	 */
 	public void setVal(int val) {
 		this.val = val;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "nom= " +nom + ", nombre d'apparition dans les produits= " + val ;
 	}
 	
 }

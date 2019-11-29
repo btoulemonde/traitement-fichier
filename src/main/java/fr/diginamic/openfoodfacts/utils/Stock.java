@@ -1,14 +1,12 @@
 package fr.diginamic.openfoodfacts.utils;
 import java.util.ArrayList;
-
 import java.util.List;
-
-import fr.diginamic.openfoodfacts.entites.Allergene;
 import fr.diginamic.openfoodfacts.entites.Produit;
 
 public class Stock {
 	private List<Produit> produits = new ArrayList<>();
 	private List<String> allergenes = new ArrayList<>();
+	private List <String> additifs = new ArrayList<>();
 	
 
 	/**
@@ -37,6 +35,20 @@ public class Stock {
 	 */
 	public void setProduits(List<Produit> produits) {
 		this.produits = produits;
+	}
+
+	/** Getter
+	 * @return the additifs
+	 */
+	public List<String> getAdditifs() {
+		return additifs;
+	}
+
+	/** Setter
+	 * @param additifs the additifs to set
+	 */
+	public void setAdditifs(List<String> additifs) {
+		this.additifs = additifs;
 	}
 
 
